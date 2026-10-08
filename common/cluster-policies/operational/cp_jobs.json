@@ -1,0 +1,215 @@
+{
+  "autoscale.max_workers": {
+    "defaultValue": 2,
+    "isOptional": true,
+    "maxValue": 100,
+    "type": "range"
+  },
+  "autoscale.min_workers": {
+    "defaultValue": 1,
+    "isOptional": true,
+    "minValue": 1,
+    "type": "range"
+  },
+  "aws_attributes.availability": {
+    "type": "fixed",
+    "value": "ON_DEMAND"
+  },
+  "aws_attributes.ebs_volume_count": {
+    "defaultValue": 1,
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "aws_attributes.ebs_volume_size": {
+    "defaultValue": 100,
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "aws_attributes.ebs_volume_type": {
+    "defaultValue": "GENERAL_PURPOSE_SSD",
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "aws_attributes.zone_id": {
+    "type": "fixed",
+    "value": "auto"
+  },
+  "cluster_log_conf.path": {
+    "type": "fixed",
+    "value": "dbfs:/cluster-logs/credentialpassthroughjob_glue_operational_tech"
+  },
+  "cluster_log_conf.type": {
+    "type": "fixed",
+    "value": "DBFS"
+  },
+  "cluster_source": {
+    "type": "fixed",
+    "value": "JOB"
+  },
+  "kind": {
+    "type": "fixed",
+    "value": "CLASSIC_PREVIEW"
+  },
+  "custom_tags.ASV": {
+    "type": "fixed",
+    "value": "ASVOPERATIONALDATAANALYTICSPLATFORM"
+  },
+  "custom_tags.BA": {
+    "type": "fixed",
+    "value": "BAOPERATIONALDATAANALYTICSPLATFORM"
+  },
+  "custom_tags.CMDBEnvironment": {
+    "defaultValue": "ENVPROPERATIONALDATAANALYTICSPLATFORM",
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "custom_tags.Component": {
+    "type": "fixed",
+    "value": "BAPOPERATIONALDBRKS"
+  },
+  "custom_tags.Group": {
+    "type": "fixed",
+    "value": "Operational"
+  },
+  "custom_tags.OwnerContact": {
+    "type": "fixed",
+    "value": "databricks2@capitalone.com"
+  },
+  "enable_elastic_disk": {
+    "defaultValue": true,
+    "type": "unlimited"
+  },
+  "init_scripts.0.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/proxy.sh"
+  },
+  "init_scripts.1.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/artifactory.sh"
+  },
+  "init_scripts.2.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/config_s3a.sh"
+  },
+  "init_scripts.3.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/config_java_security.sh"
+  },
+  "init_scripts.4.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/install_certs.sh"
+  },
+  "init_scripts.5.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/install_otel.sh"
+  },
+  "init_scripts.6.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/config_jdbc.sh"
+  },
+  "init_scripts.7.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/install_node_exporter.sh"
+  },
+  "runtime_engine": {
+    "defaultValue": "STANDARD",
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "spark_conf.spark.databricks.acl.dfAclsEnabled": {
+    "hidden": true,
+    "type": "forbidden"
+  },
+  "spark_conf.spark.databricks.acl.needAdminPermissionToViewLogs": {
+    "type": "fixed",
+    "value": "false"
+  },
+  "spark_conf.spark.databricks.cluster.profile": {
+    "hidden": true,
+    "type": "forbidden"
+  },
+  "spark_conf.spark.databricks.hive.metastore.glueCatalog.enabled": {
+    "type": "fixed",
+    "value": "true"
+  },
+  "spark_conf.spark.databricks.passthrough.enabled": {
+    "type": "fixed",
+    "value": "true"
+  },
+  "spark_conf.spark.databricks.passthrough.glue.credentialsProviderFactoryClassName": {
+    "type": "fixed",
+    "value": "com.databricks.s3a.credentials.DatabricksCapOneGlueCredentialsProviderFactory"
+  },
+  "spark_conf.spark.databricks.pyspark.onlyAllowTrustedFilesystems": {
+    "type": "fixed",
+    "value": "false"
+  },
+  "spark_conf.spark.databricks.pyspark.trustedFilesystems": {
+    "type": "fixed",
+    "value": "com.databricks.s3a.TalosS3AFileSystem,com.databricks.s3a.S3AFileSystem"
+  },
+  "spark_conf.spark.hadoop.aws.region": {
+    "type": "fixed",
+    "value": "us-east-1"
+  },
+  "spark_conf.spark.hadoop.environment": {
+    "type": "fixed",
+    "value": "QA"
+  },
+  "spark_conf.spark.hadoop.fs.s3.impl": {
+    "type": "fixed",
+    "value": "com.databricks.s3a.TalosS3AFileSystem"
+  },
+  "spark_conf.spark.hadoop.fs.s3.impl.disable.cache": {
+    "type": "fixed",
+    "value": "false"
+  },
+  "spark_conf.spark.hadoop.fs.s3a.impl": {
+    "type": "fixed",
+    "value": "com.databricks.s3a.TalosS3AFileSystem"
+  },
+  "spark_conf.spark.hadoop.fs.s3a.impl.disable.cache": {
+    "type": "fixed",
+    "value": "false"
+  },
+  "spark_conf.spark.hadoop.hive.metastore.glue.catalogid": {
+    "type": "fixed",
+    "value": "{{secrets/env_params/glue_catalog_id}}"
+  },
+  "spark_env_vars.cots_env": {
+    "type": "fixed",
+    "value": "qa"
+  },
+  "spark_env_vars.cots_jdbc_url": {
+    "type": "fixed",
+    "value": "jdbc:mysql://other-qauat-metastore.cjmvtzrgo6oc.us-east-1.rds.amazonaws.com:3306/organization0?sslmode=Require"
+  },
+  "spark_env_vars.cots_newrelic_key": {
+    "hidden": true,
+    "type": "fixed",
+    "value": "{{secrets/env_params/cots_newrelic_key}}"
+  },
+  "spark_env_vars.cots_okera_key": {
+    "hidden": true,
+    "type": "fixed",
+    "value": "{{secrets/env_params/cots_okera_key}}"
+  },
+  "spark_env_vars.cots_proxy": {
+    "type": "fixed",
+    "value": "http://aws-proxy-qa.cloud.capitalone.com:8099"
+  },
+  "spark_env_vars.cots_region": {
+    "type": "fixed",
+    "value": "us-east-1"
+  },
+  "spark_env_vars.hive_password": {
+    "hidden": false,
+    "type": "fixed",
+    "value": "{{secrets/env_params/hive_password}}"
+  },
+  "spark_env_vars.hive_username": {
+    "hidden": true,
+    "type": "fixed",
+    "value": "{{secrets/env_params/hive_username}}"
+  }
+}

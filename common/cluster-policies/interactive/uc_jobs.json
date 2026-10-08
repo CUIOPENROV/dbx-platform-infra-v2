@@ -1,0 +1,206 @@
+{
+  "aws_attributes.availability": {
+    "type": "fixed",
+    "value": "ON_DEMAND"
+  },
+  "aws_attributes.ebs_volume_count": {
+    "defaultValue": 1,
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "aws_attributes.ebs_volume_size": {
+    "defaultValue": 100,
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "aws_attributes.ebs_volume_type": {
+    "defaultValue": "GENERAL_PURPOSE_SSD",
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "aws_attributes.first_on_demand": {
+    "defaultValue": 1,
+    "minValue": 1,
+    "type": "range"
+  },
+  "aws_attributes.instance_profile_arn": {
+    "type": "forbidden"
+  },
+  "aws_attributes.spot_bid_price_percent": {
+    "hidden": true,
+    "type": "fixed",
+    "value": 100
+  },
+  "aws_attributes.zone_id": {
+    "defaultValue": "auto",
+    "type": "unlimited"
+  },
+  "cluster_log_conf.path": {
+    "type": "fixed",
+    "value": "dbfs:/cluster-logs/uc_job_cluster_policy"
+  },
+  "cluster_log_conf.type": {
+    "type": "fixed",
+    "value": "DBFS"
+  },
+  "cluster_type": {
+    "type": "fixed",
+    "value": "job"
+  },
+  "custom_tags.ASV": {
+    "type": "fixed",
+    "value": "ASVOPERATIONALDATAANALYTICSPLATFORM"
+  },
+  "custom_tags.BA": {
+    "type": "fixed",
+    "value": "BAOPERATIONALDATAANALYTICSPLATFORM"
+  },
+  "custom_tags.CMDBEnvironment": {
+    "defaultValue": "ENVPROPERATIONALDATAANALYTICSPLATFORM",
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "custom_tags.Component": {
+    "type": "fixed",
+    "value": "BAPOPERATIONALDBRKS"
+  },
+  "custom_tags.OwnerContact": {
+    "type": "fixed",
+    "value": "databricks2@capitalone.com"
+  },
+  "data_security_mode": {
+    "hidden": true,
+    "type": "fixed",
+    "value": "USER_ISOLATION"
+  },
+  "driver_instance_pool_id": {
+    "hidden": true,
+    "type": "forbidden"
+  },
+  "enable_elastic_disk": {
+    "defaultValue": true,
+    "type": "unlimited"
+  },
+  "init_scripts.0.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/proxy.sh"
+  },
+  "init_scripts.1.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/artifactory.sh"
+  },
+  "init_scripts.10.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/config_ntp.sh"
+  },
+  "init_scripts.11.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/osdg_setup.sh"
+  },
+  "init_scripts.2.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/config_s3a.sh"
+  },
+  "init_scripts.3.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/config_java_security.sh"
+  },
+  "init_scripts.4.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/install_certs.sh"
+  },
+  "init_scripts.5.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/install_otel.sh"
+  },
+  "init_scripts.6.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/config_jdbc.sh"
+  },
+  "init_scripts.7.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/global/install_node_exporter.sh"
+  },
+  "init_scripts.8.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/env-scripts/env-interactive.sh"
+  },
+  "init_scripts.9.volumes.destination": {
+    "type": "fixed",
+    "value": "/Volumes/uc_public/default/init_scripts/artifactory_uc_osdg.sh"
+  },
+  "instance_pool_id": {
+    "hidden": true,
+    "type": "forbidden"
+  },
+  "node_type_id": {
+    "defaultValue": "i3.xlarge",
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "num_workers": {
+    "defaultValue": 4,
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "runtime_engine": {
+    "defaultValue": "PHOTON",
+    "isOptional": true,
+    "type": "unlimited"
+  },
+  "spark_conf.spark.databricks.cluster.profile": {
+    "hidden": true,
+    "type": "forbidden"
+  },
+  "spark_conf.spark.hadoop.aws.region": {
+    "type": "fixed",
+    "value": "us-east-1"
+  },
+  "spark_conf.spark.hadoop.environment": {
+    "type": "fixed",
+    "value": "QA"
+  },
+  "spark_env_vars.cots_env": {
+    "type": "fixed",
+    "value": "qa"
+  },
+  "spark_env_vars.cots_jdbc_url": {
+    "type": "fixed",
+    "value": "jdbc:mysql://other-qauat-metastore.cjmvtzrgo6oc.us-east-1.rds.amazonaws.com:3306/organization0?sslmode=Require"
+  },
+  "spark_env_vars.cots_newrelic_key": {
+    "hidden": true,
+    "type": "fixed",
+    "value": "{{secrets/env_params/cots_newrelic_key}}"
+  },
+  "spark_env_vars.cots_proxy": {
+    "type": "fixed",
+    "value": "http://aws-proxy-qa.cloud.capitalone.com:8099"
+  },
+  "spark_env_vars.cots_region": {
+    "type": "fixed",
+    "value": "us-east-1"
+  },
+  "spark_env_vars.hive_password": {
+    "hidden": false,
+    "type": "fixed",
+    "value": "{{secrets/env_params/hive_password}}"
+  },
+  "spark_env_vars.hive_username": {
+    "hidden": true,
+    "type": "fixed",
+    "value": "{{secrets/env_params/hive_username}}"
+  },
+  "spark_version": {
+    "defaultValue": "auto:latest-lts",
+    "type": "unlimited"
+  },
+  "spark_conf.spark.hadoop.fs.s3.impl": {
+    "type": "fixed",
+    "value": "com.databricks.common.filesystem.LokiFileSystem"
+  },
+  "spark_conf.spark.hadoop.fs.s3a.impl": {
+    "type": "fixed",
+    "value": "com.databricks.common.filesystem.LokiFileSystem"
+  }
+}
